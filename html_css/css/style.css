@@ -6,7 +6,7 @@ body {
   display: grid;
   width: 100%;
   grid-template-columns: 100%;
-  grid-template-rows: 62px 58px auto 1437px 532px;
+  grid-template-rows: 62px 58px auto auto auto;
 }
 
 a {
@@ -45,6 +45,10 @@ header .user-icon {
   width: 34px;
   height: 34px;
   border-radius: 50%;
+}
+
+header .post-button {
+  display: none;
 }
 
 .index-wrap {
@@ -114,7 +118,7 @@ header .user-icon {
 
 main {
   display: grid;
-  grid-template-rows: 275px auto 303px 242px;
+  grid-template-rows: 275px auto auto auto;
 }
 
 main .main-title {
@@ -304,11 +308,6 @@ article .like-group {
   justify-content: space-between;
 }
 
-main .discussion {
-  text-align: center;
-  padding: 31.5px;
-}
-
 .markdown-description .like-sub-group1 {
   display: flex;
   align-items: center;
@@ -367,6 +366,7 @@ main .discussion {
   display: grid;
   padding: 30px 0 35px 0;
   gap: 0 15px;
+  grid-template-columns: 60px 1fr;
 }
 
 .public-info .article-zenn-icon-link {
@@ -420,7 +420,9 @@ main .discussion {
   height: 22px;
 }
 
-.discussion {
+main .discussion {
+  text-align: center;
+  padding: 33px;
   border-top: 2px solid #5c93bb2b;
   border-bottom: 2px solid #5c93bb2b;
 }
@@ -430,7 +432,7 @@ main .discussion {
 }
 
 .discussion .article-discussion {
-  width: 100%;
+  max-width: 300px;
   margin: 15px 0;
 }
 
@@ -461,6 +463,10 @@ main .comment {
   background-color: #FFFFFF;
 }
 
+.comment .mark-down-guide {
+  display: none;
+}
+
 .comment .header-group {
   display: flex;
   align-items: center;
@@ -483,6 +489,10 @@ main .comment {
   border-bottom: 2px solid #5c93bb2b;
 }
 
+.comment ::placeholder {
+  color: #C9D4DD;
+}
+
 .comment .comment-btn {
   background-color: #3EA9FF;
   border: none;
@@ -491,7 +501,6 @@ main .comment {
   color: #ffffff;
   font-weight: 700;
   padding: 6.75px 13.5px;
-  opacity: .7;
 }
 
 .comment .button-group {
@@ -505,13 +514,13 @@ main .comment {
   align-items: center;
 }
 
-.comment .photo-button {
-  margin-right: 16px;
-}
-
 .button-sub-group button {
   border: none;
   background-color: #fff;
+}
+
+.button-sub-group .embedding-msg {
+  display: none;
 }
 
 .other-article {
@@ -530,6 +539,11 @@ main .comment {
   align-items: center;
 }
 
+.other-article .community-guidelines {
+  color: #6E7B85;
+  text-decoration: underline;
+}
+
 .other-article .caution-mark {
   width: 16px;
   height: 16px;
@@ -539,6 +553,7 @@ main .comment {
   margin-top: 55px;
   display: grid;
   grid-template-columns: 14px 1fr 14px;
+  padding-bottom: 79px;
 }
 
 .other-article h2 {
@@ -667,7 +682,7 @@ footer .service-description {
 }
 
 footer .nav-group {
-  padding: 36px 0 38px 0;
+  padding: 50px 0 38px 0;
   border-bottom: 1px solid #5c93bb2b;
 }
 
@@ -698,10 +713,245 @@ footer nav {
 
 footer .footer-logo {
   text-align: center;
-  padding-top: 22px;
+  padding: 22px 0 15px 0;
 }
 
 footer .footer-logo-icon {
   width: 115px;
   height: 25px;
-}  
+}
+
+/* iPadの設定 */
+@media screen and (min-width: 577px){
+
+  header .image-sub-group {
+    width: 236px;
+  }
+
+  header .user-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  header .post-button {
+    display: inline-block;
+    border: none;
+    background: #3EA8FF;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 7px;
+    padding: 7px 17px;
+  }
+
+  main {
+    background-color: #EDF2F7;
+  }
+
+  main article {
+    background-color: #FFFFFF;
+    width: calc(340 / 375 * 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px #4385bb12;
+    display: grid;
+    grid-template-columns: 25px 1fr 25px;
+  }
+
+  main .article-wrap {
+    grid-column: 2;
+  }
+
+  article h2, .discussion h2, .other-article h2 {
+    font-size: 27px;
+  }
+
+  article .sub-title {
+    font-size: 24px;
+  }
+
+  .public-info .article-zenn-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .public-info {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .public-info p {
+    font-size: 15px;
+  }
+
+  main .discussion {
+    border-top: none;
+    border-bottom: none;
+    padding: 40px 0 0 0;
+  }
+
+  .discussion .discussion-wrap {
+    background-color: #FFFFFF;
+    border-radius: 12px 12px 0 0;
+    padding: 40px 0 50px 0;
+    width: calc(340 / 375 * 100%);
+    margin: 0 auto;
+  }
+
+  main .comment {
+    padding: 0 0 5px 0;
+  }
+
+  .comment .comment-wrap {
+    background-color: #FFFFFF;
+    border-top: 1px solid #5c93bb2b;
+    padding: 12px 17px 16px 12px;
+    border-radius: 0 0 12px 12px;
+    width: calc(326 / 375 * 100%);
+    margin: 0 auto;
+  }
+
+  .comment .mark-down-guide {
+    display: block;
+    text-decoration: underline;
+    font-size: 13px;
+    color: #93a5b1;
+    margin-left: auto;
+  }
+
+  .comment .mark-down-guide:hover {
+    color: #0f83fd;
+  }
+
+  .comment .main-arrow {
+    width: 14px;
+    transform: rotate(-45deg);
+  }
+
+  .comment textarea {
+    height: 136px;
+  }
+
+  .button-sub-group .embedding-msg {
+    display: block;
+    font-size: 13px;
+    color: #93a5b1;
+  }
+
+  .other-article {
+    padding: 0 11px;
+  }
+
+  .other-article .other-article-wrap {
+    width: calc(365 / 375 * 100%);
+    margin: 0 auto;
+  }
+
+  .other-article .article-group {
+    grid-template-columns: 92px calc(221 / 364 * 100%);
+  }
+
+  .article-wrap .emoji-wrap {
+    height: 92px;
+    width: 92px;
+  }
+
+  .article-wrap .emoji {
+    font-size: 42px;
+  }
+ 
+  .article-wrap .article-title {
+    font-size: 17px;
+  }
+
+  .nav-group ul {
+    font-size: 15px;
+  }
+
+  .nav-group li {
+    font-size: 14px;
+  }
+
+  footer {
+    padding-top: 48px;
+    grid-template-columns: 25px 1fr 25px;
+  }
+
+  footer .footer-logo {
+    padding: 25px 0 15px 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  main h1 {
+    font-size: 30px;
+  }
+
+  .other-article .article-wrap {
+    grid-template-columns: 14px 1fr 40px 1fr 14px;
+  }
+
+  .other-article .zenn-diff {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .other-article .github-action {
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  .other-article .zenn-cli {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .other-article .zenn-qiita {
+    grid-column: 4;
+    grid-row: 3;
+  }
+
+  .other-article .zenn-markdown-html {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  .other-article .github-profile {
+    grid-column: 4;
+    grid-row: 4;
+  }
+
+  .other-article .mermaid {
+    grid-column: 2;
+    grid-row: 5;
+  }
+
+  .other-article .fastapi {
+    grid-column: 4;
+    grid-row: 5;
+  }
+
+  .other-article .step-github {
+    grid-column: 2;
+    grid-row: 6;
+  }
+
+ .other-article .vscode-web {
+   grid-column: 4;
+   grid-row: 6;
+ }
+
+  .article-wrap .article-title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  footer {
+    grid-template-columns: 40px 1fr 40px;
+  }
+
+  footer nav {
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 0;
+  }
+}
