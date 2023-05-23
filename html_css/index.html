@@ -15,8 +15,8 @@
       <ul>
         <li><a href="https://zenn.dev/"><img src="images/header-logo.svg" alt="ヘッダーロゴ" class="header-logo"></a></li>
         <li class="image-sub-group">
-          <img src="images/header-mushimegane.svg" alt="虫眼鏡">
-          <img src="images/header-bell.svg" alt="通知ベル">
+          <svg class="mushimegane" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" height="23" width="23"><path d="M11.56,3.43a8.26,8.26,0,0,0,0,16.52,8.18,8.18,0,0,0,5-1.72l4.7,4.7a1.1,1.1,0,0,0,1.56,0,1.09,1.09,0,0,0,0-1.55l0,0-4.7-4.7a8.18,8.18,0,0,0,1.72-5A8.28,8.28,0,0,0,11.56,3.43Zm0,2.2A6.06,6.06,0,1,1,5.5,11.69,6,6,0,0,1,11.56,5.63Z" fill="currentColor"></path></svg>
+          <svg class="bell" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" height="23" width="23"><path fill="currentColor" d="M23.7,18.3a4.79,4.79,0,0,1-2-4V11.2a8.2,8.2,0,0,0-16.4,0v3.1a5.21,5.21,0,0,1-2.1,4.1,1.09,1.09,0,0,0-.4,1.3,1.17,1.17,0,0,0,1.1.8H9.1a4.5,4.5,0,0,0,4.4,3.7,4.42,4.42,0,0,0,4.4-3.7h5.2a1.22,1.22,0,0,0,1.2-1.2A1.1,1.1,0,0,0,23.7,18.3ZM13.5,22.18a2.5,2.5,0,0,1-2.29-1.78h4.58A2.36,2.36,0,0,1,13.5,22.18ZM6.21,18.46a7.72,7.72,0,0,0,1.15-4.07V11.16A6.16,6.16,0,0,1,13.51,5a6.22,6.22,0,0,1,6.15,6.15v3.23a8,8,0,0,0,1.15,4.07Z"></path></svg>
           <img src="images/user-icon.png" alt="ユーザーアイコン" class="user-icon">
           <button class="post-button">投稿する</button>
         </li>
@@ -41,137 +41,222 @@
       </div>
     </div>
 
-    <main>
-      <div class="main-title">
-        <div class="title-wrap">
-        <span class="main-emoji">📝</span>
-        <h1>Zennの2種類の執筆方法について</h1>
-        <p class="public-day">2020/09/06に公開・約1,200字</p>
+    <div class="main-title">
+      <div class="title-wrap">
+      <span class="main-emoji">📝</span>
+      <h1>Zennの2種類の執筆方法について</h1>
+      <p class="public-day">2020/09/06に公開・約1,200字</p>
+      </div>
+    </div>
+
+    <div class="main-wrap">
+      <div class="left-side">
+        <div class="sns-btn-wrap">
+          <button class="like-button"><img src="images/index-like.svg" alt="いいねボタン" class="like-icon"></button>
+          <span class="like-count">81</span>
+          <a href="https://twitter.com/zenn_dev" target="_blank" class="tweet-icon">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 27 27" style="enable-background:new 0 0 27 27" xml:space="preserve" aria-label="Twitter" width="27"  height="27" ><path fill="currentColor" d="M23.1,8.7c0,0.2,0,0.5,0,0.7c0,8-6.4,14.5-14.4,14.6c-0.1,0-0.1,0-0.2,0c-2.8,0-5.5-0.8-7.9-2.3c0.4,0,0.8,0.1,1.2,0.1 c2.3,0,4.6-0.8,6.3-2.1C6,19.6,4,18.2,3.3,16c0.3,0.1,0.7,0.1,1,0.1c0.5,0,0.9-0.1,1.4-0.2c-2.4-0.5-4.1-2.6-4.1-5.1v-0.1 c0.7,0.4,1.5,0.6,2.3,0.7c-1.5-1-2.2-2.5-2.2-4.3c0-0.9,0.2-1.8,0.7-2.6C5,7.8,8.8,9.7,13,9.9c-0.1-0.4-0.1-0.8-0.1-1.2 c0-2.8,2.2-5.2,5.2-5.2c1.5,0,2.8,0.6,3.8,1.7C23,5,24,4.6,25,4.1c-0.4,1.2-1.2,2.1-2.2,2.8c1-0.1,2-0.4,2.9-0.8 C24.9,7.1,24,7.9,23.1,8.7L23.1,8.7z"></path></svg>
+          </a>
+           <span class="tweet-msg">ツイート</span>
         </div>
       </div>
+      <main>
+        <article>
+          <div class="article-wrap">
+            <div class="link-wrap">
+              <a class="zenn-link" href="https://zenn.dev/topics/zenn">
+                <img src="images/article-button1.png" alt="Zenn画面遷移リンク" class="zenn-img">
+                <span>Zenn</span>
+              </a>
+              <a class="category-link" href="https://zenn.dev/tech-or-idea">
+                <img src="images/article-button2.svg" alt="投稿カテゴリリンク" class="tech-img">
+                <span>Tech</span>
+              </a>
+            </div>
 
-      <article>
-        <div class="article-wrap">
-          <div class="link-wrap">
-            <a class="zenn-link" href="https://zenn.dev/topics/zenn">
-              <img src="images/article-button1.png" alt="Zenn画面遷移リンク" class="zenn-img">
-              <span>Zenn</span>
-            </a>
-            <a class="category-link" href="https://zenn.dev/tech-or-idea">
-              <img src="images/article-button2.svg" alt="投稿カテゴリリンク" class="tech-img">
-              <span>Tech</span>
-            </a>
-          </div>
+            <p>このページではZennで記事や本を作成するときの執筆環境について紹介します。</p>
+            <h2 id="zenn-write">Zenn の執筆方法は 2 種類</h2>
+            <p>Zennのコンテンツは次のいずれかの方法で作成します。</p>
 
-          <p>このページではZennで記事や本を作成するときの執筆環境について紹介します。</p>
-          <h2>Zenn の執筆方法は 2 種類</h2>
-          <p>Zennのコンテンツは次のいずれかの方法で作成します。</p>
+            <section>
+              <h3 class="sub-title" id="web-editor">1. Webエディター</h3>
+              <figure>
+                <img src="images/article-web-editor.png" alt="webエディタ" class="web-editor-img">
+              </figure>
+              <p>ブラウザ上で動くエディターです。Zennにログインした状態で使用します。</p>
 
-          <section>
-            <h3 class="sub-title">1. Webエディター</h3>
-            <figure>
-              <img src="images/article-web-editor.png" alt="webエディタ" class="web-editor-img">
-            </figure>
-            <p>ブラウザ上で動くエディターです。Zennにログインした状態で使用します。</p>
-
-            <details>
-              <summary class="Label">ショートカットを使用しよう</summary>
-              <div class="content">
-                オンラインのmarkdownエディターでは、以下のショートカットを使用できます。
-                <ul>
-                  <li><strong>Ctrl + P（プレビュー）</strong>：markdownがどのように表示されるかをチェックできます。もう一度ショートカットを実行すると、エディターに戻ります。</li>
-                  <li><strong>Ctrl + S（内容の保存）</strong>：変更内容を保存します。</li>
-                  <li><strong>Ctrl + I（埋め込み）</strong>：ツイートや YouTube、CodePen、SpeakerDeck などの埋め込みコンテンツを挿入するためのモーダルが表示されます。</li>
-                </ul>
-                ※ Mac の場合は<span class="keyboard">Ctrl</span>の代わりに<span class="keyboard">⌘</span>キーを使用します。
-              </div>
-            </details>
-          </section>
-
-          <section>
-            <h3 class="sub-title">2. ローカルのテキストエディター + CLI</h3>
-            <figure>
-              <img src="images/article-vscode.png" alt="vscode" class="article-vscode">
-              <img src="images/article-markdown.png" alt="markdown" class="article-markdown">
-            </figure>
-            <p>自分の好きな環境で執筆したい方は<strong>GitHub リポジトリとの連携機能</strong>を利用することをおすすめします。リポジトリ連携をすると、特定のブランチに変更があったときに自動でコンテンツがzenn.devに反映されるようになります。</p>
-            <a href="https://zenn.dev/zenn/articles/connect-to-github" target="_blank" class="zen-github"><span>📘 </span>Zenn と GitHub リポジトリを連携する →</a>
-            <p>リポジトリ連携時には、ローカルでmarkdownファイルを作成し、好きなテキストエディターで編集を行います。Zenn CLIを使うことでブラウザでプレビューしながら執筆することが可能になります。</p>
-            <a href="https://zenn.dev/zenn/articles/install-zenn-cli" target="_blank" class="zen-github"><span>📘 </span>Zenn CLI を導入する →</a>
-            <div class="markdown-description">
-              <p>オンラインエディターを使う場合も、CLIを使う場合もmarkdownの書き方は変わりません。具体的な記法は下記のリンク先をご覧ください。</p>
-              <a href="https://zenn.dev/zenn/articles/markdown-guide" target="_blank" class="zen-github"><span>📘 </span>Zenn のmarkdown記法 →</a>
-              <br>
-              <a href="https://github.com/zenn-dev/zenn-docs/blob/main/articles/editor-guide.md" target="_blank" class="suggest-github"><i class="fab fa-github github-icon"></i>GitHubで編集を提案</a>
-              <div class="like-group">
-                <div class="like-sub-group1">
-                  <button class="like-button"><img src="images/index-like.svg" alt="いいねボタン" class="like-icon"></button>
-                  <span class="like-count">80</span>
+              <details>
+                <summary class="Label">ショートカットを使用しよう</summary>
+                <div class="content">
+                  オンラインのmarkdownエディターでは、以下のショートカットを使用できます。
+                  <ul>
+                    <li><strong>Ctrl + P（プレビュー）</strong>：markdownがどのように表示されるかをチェックできます。もう一度ショートカットを実行すると、エディターに戻ります。</li>
+                    <li><strong>Ctrl + S（内容の保存）</strong>：変更内容を保存します。</li>
+                    <li><strong>Ctrl + I（埋め込み）</strong>：ツイートや YouTube、CodePen、SpeakerDeck などの埋め込みコンテンツを挿入するためのモーダルが表示されます。</li>
+                  </ul>
+                  ※ Mac の場合は<span class="keyboard">Ctrl</span>の代わりに<span class="keyboard">⌘</span>キーを使用します。
                 </div>
-                <div class="like-sub-group2">
-                  <button class="open-close-button"><img src="images/main-open-close-button.svg" alt="モーダル開閉ボタン" class="open-close-icon"></button>
-                  <a href="https://twitter.com/intent/tweet?url=https://zenn.dev/zenn/articles/editor-guide&text=Zenn%E3%81%AE2%E7%A8%AE%E9%A1%9E%E3%81%AE%E5%9F%B7%E7%AD%86%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BD%9CZenn%E5%85%AC%E5%BC%8F&hashtags=zenn" class="twitter-button"><img src="images/main-twitter.svg" class="main-twitter-icon"><span>ツイート</span></a>
+              </details>
+            </section>
+
+            <section>
+              <h3 class="sub-title" id="local-text-editor">2. ローカルのテキストエディター + CLI</h3>
+              <figure>
+                <img src="images/article-vscode.png" alt="vscode" class="article-vscode">
+                <img src="images/article-markdown.png" alt="markdown" class="article-markdown">
+              </figure>
+              <p>自分の好きな環境で執筆したい方は<strong>GitHub リポジトリとの連携機能</strong>を利用することをおすすめします。リポジトリ連携をすると、特定のブランチに変更があったときに自動でコンテンツがzenn.devに反映されるようになります。</p>
+              <a href="https://zenn.dev/zenn/articles/connect-to-github" target="_blank" class="zen-github"><span>📘 </span>Zenn と GitHub リポジトリを連携する →</a>
+              <p>リポジトリ連携時には、ローカルでmarkdownファイルを作成し、好きなテキストエディターで編集を行います。Zenn CLIを使うことでブラウザでプレビューしながら執筆することが可能になります。</p>
+              <a href="https://zenn.dev/zenn/articles/install-zenn-cli" target="_blank" class="zen-github"><span>📘 </span>Zenn CLI を導入する →</a>
+              <div class="markdown-description">
+                <p>オンラインエディターを使う場合も、CLIを使う場合もmarkdownの書き方は変わりません。具体的な記法は下記のリンク先をご覧ください。</p>
+                <a href="https://zenn.dev/zenn/articles/markdown-guide" target="_blank" class="zen-github"><span>📘 </span>Zenn のmarkdown記法 →</a>
+                <br>
+                <a href="https://github.com/zenn-dev/zenn-docs/blob/main/articles/editor-guide.md" target="_blank" class="suggest-github"><i class="fab fa-github github-icon"></i>GitHubで編集を提案</a>
+                <div class="like-group">
+                  <div class="like-sub-group1">
+                    <button class="like-button"><img src="images/index-like.svg" alt="いいねボタン" class="like-icon"></button>
+                    <span class="like-count">80</span>
+                  </div>
+                  <div class="like-sub-group2">
+                    <button class="open-close-button"><img src="images/main-open-close-button.svg" alt="モーダル開閉ボタン" class="open-close-icon"></button>
+                    <a href="https://twitter.com/intent/tweet?url=https://zenn.dev/zenn/articles/editor-guide&text=Zenn%E3%81%AE2%E7%A8%AE%E9%A1%9E%E3%81%AE%E5%9F%B7%E7%AD%86%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BD%9CZenn%E5%85%AC%E5%BC%8F&hashtags=zenn" class="twitter-button">
+                      <svg class="main-twitter-icon" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 27 27" style="enable-background:new 0 0 27 27" xml:space="preserve" aria-label="Twitter" width="27"  height="27" ><path fill="currentColor" d="M23.1,8.7c0,0.2,0,0.5,0,0.7c0,8-6.4,14.5-14.4,14.6c-0.1,0-0.1,0-0.2,0c-2.8,0-5.5-0.8-7.9-2.3c0.4,0,0.8,0.1,1.2,0.1 c2.3,0,4.6-0.8,6.3-2.1C6,19.6,4,18.2,3.3,16c0.3,0.1,0.7,0.1,1,0.1c0.5,0,0.9-0.1,1.4-0.2c-2.4-0.5-4.1-2.6-4.1-5.1v-0.1 c0.7,0.4,1.5,0.6,2.3,0.7c-1.5-1-2.2-2.5-2.2-4.3c0-0.9,0.2-1.8,0.7-2.6C5,7.8,8.8,9.7,13,9.9c-0.1-0.4-0.1-0.8-0.1-1.2 c0-2.8,2.2-5.2,5.2-5.2c1.5,0,2.8,0.6,3.8,1.7C23,5,24,4.6,25,4.1c-0.4,1.2-1.2,2.1-2.2,2.8c1-0.1,2-0.4,2.9-0.8 C24.9,7.1,24,7.9,23.1,8.7L23.1,8.7z"></path></svg>
+                      <span>ツイート</span>
+                    </a>
+                  </div>
                 </div>
               </div>
+              <div class="public-info">
+                <a href="https://zenn.dev/zenn" class="article-zenn-icon-link"><img src="images/index-icon.jpeg" class="article-zenn-icon"></a>
+                <a href="https://zenn.dev/zenn" class="public-message">Zenn公式</a>
+                <p>Zennの使い方や開発状況を発信する公式アカウントです。</p>
+                <div class="public-sns-group">
+                  <button>フォロー</button>
+                  <a href="https://github.com/zenn-dev" target="_blank" class="tooltip">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 27 27" style="enable-background:new 0 0 27 27" xml:space="preserve" aria-label="GitHub" width="21"  height="21" ><path fill="currentColor" d="M13.4,1.2C7,1,1.8,6,1.7,12.4c0,0.1,0,0.4,0,0.5c0,5.1,3.2,9.8,8.2,11.5c0.6,0.1,0.7-0.2,0.7-0.6s0-1.8,0-2.9 c0,0-3.3,0.6-4-1.5c0,0-0.6-1.3-1.3-1.8c0,0-1.1-0.7,0.1-0.7c0.7,0.1,1.5,0.6,1.8,1.2c0.6,1.2,2.2,1.7,3.4,1h0.1 c0.1-0.6,0.4-1.2,0.7-1.6C8.7,17.1,6,16.9,6,12.3c0-1.1,0.5-2.1,1.2-2.8c0-1.1,0-2.2,0.3-3.2c1-0.4,3.3,1.3,3.3,1.3c2-0.6,4-0.6,6,0 c0,0,2.2-1.6,3.2-1.2c0.5,1,0.5,2.2,0.1,3.2c0.7,0.7,1.2,1.8,1.2,2.8c0,4.5-2.8,5-5.5,5.2c0.6,0.6,0.9,1.3,0.7,2.2c0,1.7,0,3.5,0,4 s0.2,0.6,0.7,0.6c4.9-1.7,8.2-6.2,8-11.5c0.1-6.4-5.1-11.6-11.6-11.6C13.5,1.2,13.4,1.2,13.4,1.2z"></path></svg>
+                    <span class="tooltip-text">@zenn-dev</span>
+                  </a>
+                  <a href="https://twitter.com/zenn_dev" target="_blank" class="aside-public-icon tooltip">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 27 27" style="enable-background:new 0 0 27 27" xml:space="preserve" aria-label="Twitter" width="21"  height="21" ><path fill="currentColor" d="M23.1,8.7c0,0.2,0,0.5,0,0.7c0,8-6.4,14.5-14.4,14.6c-0.1,0-0.1,0-0.2,0c-2.8,0-5.5-0.8-7.9-2.3c0.4,0,0.8,0.1,1.2,0.1 c2.3,0,4.6-0.8,6.3-2.1C6,19.6,4,18.2,3.3,16c0.3,0.1,0.7,0.1,1,0.1c0.5,0,0.9-0.1,1.4-0.2c-2.4-0.5-4.1-2.6-4.1-5.1v-0.1 c0.7,0.4,1.5,0.6,2.3,0.7c-1.5-1-2.2-2.5-2.2-4.3c0-0.9,0.2-1.8,0.7-2.6C5,7.8,8.8,9.7,13,9.9c-0.1-0.4-0.1-0.8-0.1-1.2 c0-2.8,2.2-5.2,5.2-5.2c1.5,0,2.8,0.6,3.8,1.7C23,5,24,4.6,25,4.1c-0.4,1.2-1.2,2.1-2.2,2.8c1-0.1,2-0.4,2.9-0.8 C24.9,7.1,24,7.9,23.1,8.7L23.1,8.7z"></path></svg>
+                    <span class="tooltip-text">@zenn-dev</span>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <section class="discussion">
+          <div class="discussion-wrap">
+            <h2>Discussion</h2>
+            <figure>
+              <img src="images/article-discussion.png" alt="ディスカッション画像" class="article-discussion">
+            </figure>
+          </div>
+        </section>
+
+        <div class="comment">
+          <div class="comment-wrap">
+            <div class="header-group">
+              <img src="images/user-icon.png" alt="ユーザーアイコン" class="user-icon">
+              <button class="markdown-button">Markdown</button>
+              <button class="preview-button">Preview</button>
+              <a href="https://zenn.dev/zenn/articles/markdown-guide" target="_blank" class="mark-down-guide">Markdownガイド
+                <img src="images/main-arrow.svg" alt="矢印" class="main-arrow">
+              </a>
             </div>
-            <div class="public-info">
-              <a href="https://zenn.dev/zenn" class="article-zenn-icon-link"><img src="images/index-icon.jpeg" class="article-zenn-icon"></a>
-              <a href="https://zenn.dev/zenn" class="public-message">Zenn公式</a>
-              <p>Zennの使い方や開発状況を発信する公式アカウントです。</p>
-              <div class="public-sns-group">
-                <button>フォロー</button>
-                <a href="https://github.com/zenn-dev" target="_blank"><img src="images/public-github.svg" alt="Githubアイコン"></a>
-                <a href="https://twitter.com/zenn_dev" target="_blank"><img src="images/public-twitter.svg" alt="ツイッターアイコン"></a>
+            <div class="comment-form-wrap">
+              <form method="POST" action="#" id="comment-form" encotype="text/plain">
+                <textarea placeholder="記事についてコメントする" name="comment" cols="21" rows="5"></textarea>
+              </form>
+              <div class="button-group">
+                <div class="button-sub-group">
+                  <button><img src="images/main-photo.svg" alt="写真追加ボタン" class="photo-button"></button>
+                  <button><img src="images/main-plus.svg" alt="プラスボタン"></button>
+                  <span class="embedding-msg">埋め込み</span>
+                </div>
+                <input type="submit" value="投稿する" form="comment-form" class="comment-btn">
               </div>
             </div>
-          </section>
-        </div>
-      </article>
-
-      <section class="discussion">
-        <div class="discussion-wrap">
-          <h2>Discussion</h2>
-          <figure>
-            <img src="images/article-discussion.png" alt="ディスカッション画像" class="article-discussion">
-          </figure>
-        </div>
-      </section>
-
-      <div class="comment">
-        <div class="comment-wrap">
-          <div class="header-group">
-            <img src="images/user-icon.png" alt="ユーザーアイコン" class="user-icon">
-            <button class="markdown-button">Markdown</button>
-            <button class="preview-button">Preview</button>
-            <a href="https://zenn.dev/zenn/articles/markdown-guide" target="_blank" class="mark-down-guide">Markdownガイド
-              <img src="images/main-arrow.svg" alt="矢印" class="main-arrow">
-            </a>
-          </div>
-          <div class="comment-form-wrap">
-            <form method="POST" action="#" id="comment-form" encotype="text/plain">
-              <textarea placeholder="記事についてコメントする" name="comment" cols="21" rows="5"></textarea>
-            </form>
-            <div class="button-group">
-              <div class="button-sub-group">
-                <button><img src="images/main-photo.svg" alt="写真追加ボタン" class="photo-button"></button>
-                <button><img src="images/main-plus.svg" alt="プラスボタン"></button>
-                <span class="embedding-msg">埋め込み</span>
-              </div>
-              <input type="submit" value="投稿する" form="comment-form" class="comment-btn">
-            </div>
           </div>
         </div>
-      </div>
-    </main>
-
-    <section class="other-article">
-      <div class="other-article-wrap">
         <div class="caution-wrap">
           <p class="caution-msg">
             <img src="images/other-article-caution.svg" alt="注意喚起" class="caution-mark">
             <a href="https://zenn.dev/guideline" class="community-guidelines">コミュニティガイドライン</a>に則った投稿をしましょう。
           </p>
         </div>
+      </main>
+      <aside>
+        <div class="basic-info">
+          <div class="sub-basic-info">
+            <div class="icon-wrap">
+              <img src="images/aside-author.svg" alt="著者" class="bassic-info-icon"><span class="basic-title">著者</span>
+            </div>
+            <a href="https://zenn.dev/zenn" class="public-wrap">
+              <img src="images/index-icon.jpeg" alt="Zennアイコン" class="zenn-icon">
+              <span>Zenn公式</span>
+            </a>
+          </div>
+          <div class="sub-basic-info">
+            <div class="icon-wrap">
+              <img src="images/aside-publish.svg" alt="公開" class="bassic-info-icon"><span class="basic-title">公開</span>
+            </div>
+            <span class="public-wrap">2020/09/06</span>
+          </div>
+          <div class="sub-basic-info">
+            <div class="icon-wrap">
+              <img src="images/aside-update.svg" alt="本文更新" class="bassic-info-icon">
+              <span class="basic-title">本文更新</span>
+            </div>
+            <div class="public-wrap">
+              <a href="https://zenn.dev/zenn" class="tooltip">
+                <svg class="git-icon" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 27 27" style="enable-background:new 0 0 27 27" xml:space="preserve" height="20" width="20"><path fill="currentColor" d="M13.4,1.2C7,1,1.8,6,1.7,12.4c0,0.1,0,0.4,0,0.5c0,5.1,3.2,9.8,8.2,11.5c0.6,0.1,0.7-0.2,0.7-0.6s0-1.8,0-2.9 c0,0-3.3,0.6-4-1.5c0,0-0.6-1.3-1.3-1.8c0,0-1.1-0.7,0.1-0.7c0.7,0.1,1.5,0.6,1.8,1.2c0.6,1.2,2.2,1.7,3.4,1h0.1 c0.1-0.6,0.4-1.2,0.7-1.6C8.7,17.1,6,16.9,6,12.3c0-1.1,0.5-2.1,1.2-2.8c0-1.1,0-2.2,0.3-3.2c1-0.4,3.3,1.3,3.3,1.3c2-0.6,4-0.6,6,0 c0,0,2.2-1.6,3.2-1.2c0.5,1,0.5,2.2,0.1,3.2c0.7,0.7,1.2,1.8,1.2,2.8c0,4.5-2.8,5-5.5,5.2c0.6,0.6,0.9,1.3,0.7,2.2c0,1.7,0,3.5,0,4 s0.2,0.6,0.7,0.6c4.9-1.7,8.2-6.2,8-11.5c0.1-6.4-5.1-11.6-11.6-11.6C13.5,1.2,13.4,1.2,13.4,1.2z" fill-opacity="0.82"></path></svg>
+                <span class="tooltip-text">コミット履歴を見る</span>
+              </a>
+              <span>2021/09/09</span>
+            </div>
+          </div>
+          <div class="sub-basic-info">
+            <div class="icon-wrap">
+              <img src="images/aside-text.svg" alt="文章量" class="bassic-info-icon"><span class="basic-title">文章量</span>
+            </div>
+            <span class="public-wrap">約1,200字</span>
+          </div>
+        </div>
+        <div class="sub-group">
+          <div class="aside-public-info">
+            <a href="https://zenn.dev/zenn" class="article-zenn-icon-link"><img src="images/index-icon.jpeg" class="aside-zenn-icon"></a>
+            <a href="https://zenn.dev/zenn" class="public-message">Zenn公式</a>
+            <div class="aside-public-sns-group">
+              <button>フォロー</button>
+              <a href="https://github.com/zenn-dev" target="_blank" class="aside-public-icon tooltip">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 27 27" style="enable-background:new 0 0 27 27" xml:space="preserve" aria-label="GitHub" width="21"  height="21" ><path fill="currentColor" d="M13.4,1.2C7,1,1.8,6,1.7,12.4c0,0.1,0,0.4,0,0.5c0,5.1,3.2,9.8,8.2,11.5c0.6,0.1,0.7-0.2,0.7-0.6s0-1.8,0-2.9 c0,0-3.3,0.6-4-1.5c0,0-0.6-1.3-1.3-1.8c0,0-1.1-0.7,0.1-0.7c0.7,0.1,1.5,0.6,1.8,1.2c0.6,1.2,2.2,1.7,3.4,1h0.1 c0.1-0.6,0.4-1.2,0.7-1.6C8.7,17.1,6,16.9,6,12.3c0-1.1,0.5-2.1,1.2-2.8c0-1.1,0-2.2,0.3-3.2c1-0.4,3.3,1.3,3.3,1.3c2-0.6,4-0.6,6,0 c0,0,2.2-1.6,3.2-1.2c0.5,1,0.5,2.2,0.1,3.2c0.7,0.7,1.2,1.8,1.2,2.8c0,4.5-2.8,5-5.5,5.2c0.6,0.6,0.9,1.3,0.7,2.2c0,1.7,0,3.5,0,4 s0.2,0.6,0.7,0.6c4.9-1.7,8.2-6.2,8-11.5c0.1-6.4-5.1-11.6-11.6-11.6C13.5,1.2,13.4,1.2,13.4,1.2z"></path></svg>
+                <span class="tooltip-text">@zenn-dev</span>
+              </a>
+              <a href="https://twitter.com/zenn_dev" target="_blank" class="aside-public-icon tooltip">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 27 27" style="enable-background:new 0 0 27 27" xml:space="preserve" aria-label="Twitter" width="21"  height="21" ><path fill="currentColor" d="M23.1,8.7c0,0.2,0,0.5,0,0.7c0,8-6.4,14.5-14.4,14.6c-0.1,0-0.1,0-0.2,0c-2.8,0-5.5-0.8-7.9-2.3c0.4,0,0.8,0.1,1.2,0.1 c2.3,0,4.6-0.8,6.3-2.1C6,19.6,4,18.2,3.3,16c0.3,0.1,0.7,0.1,1,0.1c0.5,0,0.9-0.1,1.4-0.2c-2.4-0.5-4.1-2.6-4.1-5.1v-0.1 c0.7,0.4,1.5,0.6,2.3,0.7c-1.5-1-2.2-2.5-2.2-4.3c0-0.9,0.2-1.8,0.7-2.6C5,7.8,8.8,9.7,13,9.9c-0.1-0.4-0.1-0.8-0.1-1.2 c0-2.8,2.2-5.2,5.2-5.2c1.5,0,2.8,0.6,3.8,1.7C23,5,24,4.6,25,4.1c-0.4,1.2-1.2,2.1-2.2,2.8c1-0.1,2-0.4,2.9-0.8 C24.9,7.1,24,7.9,23.1,8.7L23.1,8.7z"></path></svg>
+                <span class="tooltip-text">@zenn-dev</span>
+              </a>
+            </div>
+            <p>Zennの使い方や開発状況を発信する公式アカウントです。</p>
+          </div>
+          <div class="aside-index">
+            <h3>目次</h3>
+            <ul class="aside-index-wrap">
+              <li class="first-list"><a href="#zenn-write" class="active">Zenn の執筆方法は 2 種類</a></li>
+              <li class="second-list"><a href="#web-editor">1. Webエディター</a></li>
+              <li class="third-list"><a href="#local-text-editor">2. ローカルのテキストエディター + CLI</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="other-article">
+      <div class="other-article-wrap">
         <div class="article-wrap">
           <h2>Read next</h2>
           <div class="article-group zenn-diff">
@@ -352,7 +437,7 @@
           <figure>
             <img src="images/header-logo.svg" alt="zenロゴ" class="zen-logo">
           </figure>
-          <p class="service-description">エンジニアのための情報共有コミュニティ</p>
+          <p class="service-description">エンジニアのための<br class="ps-br">情報共有コミュニティ</p>
         </div>
         <div class="nav-group">
           <nav>
