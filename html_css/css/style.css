@@ -738,6 +738,11 @@ main .caution-mark {
 
 .article-wrap .other-user-waddy_u {
   font-size: 13px;
+  color: #000000d1;
+}
+
+.article-wrap .other-user-waddy_u:hover {
+  text-decoration: underline;
 }
 
 .article-wrap .article-part-info {
