@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
-lines = []
-while (line = gets)
-  lines << line.chomp.split(',').map(&:to_i)
+regulation_strokes, player_strokes = gets('').split("\n").map do |line|
+  line.chomp.split(',').map(&:to_i)
 end
-
-regulation_strokes, player_strokes = lines
 
 common_associations = { -1 => 'バーディ', 0 => 'パー', 1 => 'ボギー' }
 associations = {
