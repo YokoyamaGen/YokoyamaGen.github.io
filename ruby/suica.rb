@@ -11,16 +11,20 @@ class Suica
   def put(money)
     raise ArgumentError, 'You cannot put less than 100 yen onto your Suica card.' if money < 100
 
-    calc_deposit(money)
+    put_deposit(money)
   end
 
   def call_reduce(money)
-    calc_deposit(money * -1)
+    reduce_deposit(money)
   end
 
   private
 
-  def calc_deposit(money)
-    @deposit.positive? ? @deposit += money : @deposit -= money
+  def put_deposit(money)
+    @deposit += money
+  end
+
+  def reduce_deposit(money)
+    @deposit -= money
   end
 end
