@@ -4,35 +4,38 @@
 class VendingMachine
   DEFAULT_SALES_AMOUNT = 0
 
-  attr_reader :sales_amount, :juice_number_list
+  attr_reader :sales_amount
 
-  def initialize(juice, number, sales_amount = DEFAULT_SALES_AMOUNT)
-    @juice_number_list = { juice.name => number }
+  def initialize(juice, juice_list, sales_amount = DEFAULT_SALES_AMOUNT)
+    @juice_list = { juice.name => juice_list }
     @sales_amount = sales_amount
   end
 
+  def juice_number_list(juice)
+    @juice_list[juice.name].size
+  end
+
   def purchase(suica, juice)
-    purchasable_juice = purchasable_list.find { |j| j == juice.name }
-    if suica.deposit <= juice.price || purchasable_juice.nil?
+    if suica.deposit < juice.price || juice_number_list(juice) <= 0
       raise "You don't have enough money on your card or no juice in stock."
     end
 
-    @juice_number_list[juice.name] -= 1
+    @juice_list[juice.name].shift
     add_sales_amount(juice.price)
     suica.call_reduce(juice.price)
   end
 
   def purchasable_list
-    purchasable_juice = @juice_number_list.select { |_k, v| v.positive? }
+    purchasable_juice = @juice_list.select { |_k, v| v.size.positive? }
     purchasable_juice.keys
   end
 
-  def add_juice(new_juice, number)
-    @juice_number_list[new_juice.name] = number
+  def add_juice(new_juice, new_juice_list)
+    @juice_list[new_juice.name] = new_juice_list
   end
 
-  def add_number(juice, number)
-    @juice_number_list[juice.name] += number
+  def add_number(juice)
+    @juice_list[juice.name].push(juice)
   end
 
   private
