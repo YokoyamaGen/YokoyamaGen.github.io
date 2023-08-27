@@ -6,10 +6,11 @@
   self_introduction {label: "varchar"}
   location {label: "varchar"}
   website {label: "varchar"}
-  date_birth {label: "date, null"}
+  birthday {label: "date, null"}
   profile_image {label: "varchar"}
   avatar_image {label: "varchar"}
   email {label: "varchar, not null, uniq" }
+  password {label: "varchar, not null" } 
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
@@ -23,7 +24,7 @@
 [tweets]
   *id {label: "bigint, not null"}
   user_id {label: "bigint, not null, FK(users)"}
-  tweet {label: "varchar, not null"} 
+  tweet {label: "varchar(140), not null"} 
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
