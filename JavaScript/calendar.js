@@ -1,12 +1,5 @@
-const { program } = require("commander");
 
-program.option("-m, --multiplier <number>", "A multiplier value", parseFloat);
-
-program.parse(process.argv);
-
-const options = program.opts();
-
-if (options.multiplier < 1 || options.multiplier > 12 ) {
+if (process.argv[3] < 1 || process.argv[3] > 12) {
   throw new Error("引数が不正です。1〜12の数字以外は使用できません");
 }
 
@@ -16,8 +9,8 @@ date.setHours(0, 0, 0, 0);
 
 const year = date.getFullYear();
 
-if (options.multiplier !== undefined) {
-  date.setMonth(options.multiplier - 1);
+if (process.argv[3] !== undefined) {
+  date.setMonth(process.argv[3] - 1);
 }
 
 const month = date.getMonth() + 1;
