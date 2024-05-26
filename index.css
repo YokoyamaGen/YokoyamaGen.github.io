@@ -1,0 +1,12 @@
+li {
+  display: flex;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#edit-btn, #delete-btn {
+  margin-left: 10px;
+}
+
