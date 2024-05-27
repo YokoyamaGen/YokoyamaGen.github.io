@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <div>全てのタスク：<span id="all-task">0</span></div>
+      <div>完了済み：<span id="compuleted-task">0</span></div>
+      <div>未完了：<span id="uncompuleted-task">0</span></div>
+    </div>
+
+    <p>
+      <label>タスク名：<input type="text" id="task-name"></label>
+      <input type="button" value="保存" id="save-button">
+    </p>
+
+    <section>
+      <h2>タスク一覧</h2>
+      <ul id="task-list">
+      </ul>
+    </section>
+
+    <script src="./todo.js"></script>
+  </body>
+</html>
