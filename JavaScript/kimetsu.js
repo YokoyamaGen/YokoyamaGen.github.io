@@ -59,24 +59,5 @@ function radioFunc() {
     }
   }
 
-  selectedApi(selectedButton);
-}
-
-function selectedApi(selectedButton) {
-  let apiUrl;
-  switch (selectedButton) {
-    case "all_character":
-      apiUrl = "https://ihatov08.github.io/kimetsu_api/api/all.json";
-      break;
-    case "demon_slayer_corps":
-      apiUrl = "https://ihatov08.github.io/kimetsu_api/api/kisatsutai.json";
-      break;
-    case "pillar":
-      apiUrl = "https://ihatov08.github.io/kimetsu_api/api/hashira.json";
-      break;
-    case "demon":
-      apiUrl = "https://ihatov08.github.io/kimetsu_api/api/oni.json";
-      break;
-  }
-  apiFetch(apiUrl);
+  apiFetch(`https://ihatov08.github.io/kimetsu_api/api/${selectedButton}.json`);
 }
