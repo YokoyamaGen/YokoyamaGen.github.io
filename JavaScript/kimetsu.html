@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./kimetsu.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <!-- ローディング画面 -->
+      <div id="loading" class="loaded">
+        <div class="spinner"></div>
+      </div>
+
+      <form name="character_form" class="choices">
+        <div class="select-item">
+          <input type="radio" name="kimetsu" value="all" id="all_character" onchange="radioFunc()" checked>
+          <label for="all_character">全キャラクター</label>
+        </div>
+        <div  class="select-item">
+          <input type="radio" name="kimetsu" value="kisatsutai" id="demon_slayer_corps" onchange="radioFunc()">
+          <label for="demon_slayer_corps">鬼殺隊</label>
+        </div>
+        <div  class="select-item">
+          <input type="radio" name="kimetsu" value="hashira" id="kimetsu" onchange="radioFunc()">
+          <label for="kimetsu">柱</label>
+        </div>
+        <div  class="select-item">
+          <input type="radio" name="kimetsu" value="oni" id="demon" onchange="radioFunc()">
+          <label for="demon">鬼</label>
+        </div>
+      </form>
+
+      <div class="table">
+        <div class="header">
+          <div class="header-item">名前</div>
+          <div class="header-item">画像</div>
+          <div class="header-item">カテゴリ</div>
+        </div>
+        <div id="body">
+          <div class="name-item" id="name"></div>
+          <div class="image-item" id="image"></div>
+          <div class="category-item" id="category"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./kimetsu.js"></script>
+  </body>
+</html>
