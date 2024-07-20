@@ -2,7 +2,7 @@
   "name": "react-todo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yokoyamagen.github.io/yokoyamagen.github.io/",
+  "homepage": "https://yokoyamagen.github.io",
   "dependencies": {
     "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.4",
