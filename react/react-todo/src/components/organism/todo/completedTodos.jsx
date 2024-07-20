@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { PrimaryBtn } from "../../atom/btn/primary"
 
 export const CompletedTodos = (props) => {
   const {completedTasks, restoreTodo} = props;
@@ -12,16 +13,6 @@ export const CompletedTodos = (props) => {
     margin: 8px;
     border-radius: 8px;
     background-color: #c9dede;
-  `
-
-  const buttonStyle = css`
-    border-radius: 8px;
-    border: none;
-    padding: 7px 16px;
-    &:hover {
-      cursor: pointer;
-      opacity: 0.7;
-    }
   `
 
   const listStyle = css`
@@ -44,7 +35,7 @@ export const CompletedTodos = (props) => {
               <li key={index}>
                 <div css={buttonWrapStyle}>
                   <div>{todo.name}</div>
-                  <button css={buttonStyle} onClick={() => restoreTodo(index)}>(戻す)</button>
+                  <PrimaryBtn onClick={() => restoreTodo(index)}>(戻す)</PrimaryBtn>
                 </div>
               </li>)
           )}
