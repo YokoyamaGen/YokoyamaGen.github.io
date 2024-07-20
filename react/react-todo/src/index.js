@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Todo } from "./Todo";
+import { TodoPage } from "./components/pages/todoPage";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Todo />
+    <TodoPage />
   </React.StrictMode>
 );
 
