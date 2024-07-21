@@ -7,15 +7,16 @@ import { CompletedTodos } from "../organism/todo/completedTodos"
 import { InputTextBtn } from "../molecule/inputTextBtn"
 
 export const TodoPage = () => {
-  const [uncompletedTasks, setUncompletedTasks] = useState([])
   const [text, setText] = useState("")
   const [editTask, setEditTask] = useState("")
-  const [completedTasks, setCompletedTasks] = useState([])
+  const [tasks, setTasks] = useState([])
+  const completedTasks = tasks.filter((item) => item.isCompleted)
+  const uncompletedTasks = tasks.filter((item) => !item.isCompleted)
 
   const saveBtn = () => {
     if(!text) return;
-    const taskList = [...uncompletedTasks, {name: text, isEdit: false, isCompleted: false}]
-    setUncompletedTasks(taskList)
+    const newTaskList = [...tasks, {name: text, isEdit: false, isCompleted: false}]
+    setTasks(newTaskList)
     setText("")
   };
 
@@ -28,46 +29,40 @@ export const TodoPage = () => {
   }
 
   const editTodo = (index) => {
-    const newTasks = [...uncompletedTasks]
-    newTasks[index].isEdit = true;
-    setUncompletedTasks(newTasks)
-    setEditTask(newTasks[index].name)
+    const editTasks = [...tasks]
+    editTasks[index].isEdit = true;
+    setTasks(editTasks)
+    setEditTask(editTasks[index].name)
   }
 
   const editSaveBtn = (index) => {
-    const newTasks = [...uncompletedTasks]
-    newTasks[index].name = editTask;
-    newTasks[index].isEdit = false;
-    setUncompletedTasks(newTasks)
+    const editTasks = [...tasks]
+    editTasks[index].name = editTask;
+    editTasks[index].isEdit = false;
+    setTasks(editTasks)
     setEditTask("")
   }
 
   const deleteUncompleteTodo = (index) => {
     if (window.confirm("本当に削除してもよろしいですか?")) {
-      const newTasks = [...uncompletedTasks]
-      newTasks.splice(index, 1)
-      setUncompletedTasks(newTasks)
+      const deleteTasks = [...tasks]
+      deleteTasks.splice(index, 1)
+      setTasks(deleteTasks)
     }
   }
 
   const changeCompleted = (index) => {
-    const uncompleted = [...uncompletedTasks]
-    uncompleted[index].isCompleted = !uncompleted[index].isCompleted
-    const completeTask = [uncompleted[index], ...completedTasks]
-    setCompletedTasks(completeTask)
-
-    uncompletedTasks.splice(index, 1)
-    setUncompletedTasks(uncompletedTasks)
+    const newUncompletedTasks = [...uncompletedTasks]
+    newUncompletedTasks[index].isCompleted = !newUncompletedTasks[index].isCompleted
+    const newAllTasks = [...newUncompletedTasks, ...completedTasks]
+    setTasks(newAllTasks)
   }
 
   const restoreTodo = (index) => {
-    const completed = [...completedTasks]
-    completed[index].isCompleted = !completed[index].isCompleted
-    const uncompleteTask = [completed[index], ...uncompletedTasks]
-    setUncompletedTasks(uncompleteTask)
-
-    completedTasks.splice(index, 1)
-    setCompletedTasks(completedTasks)
+    const newcompletedTasks = [...completedTasks]
+    newcompletedTasks[index].isCompleted = !newcompletedTasks[index].isCompleted
+    const newAllTasks = [...newcompletedTasks, ...uncompletedTasks]
+    setTasks(newAllTasks)
   }
 
   const bodyStyle = css`
