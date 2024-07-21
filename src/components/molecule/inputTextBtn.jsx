@@ -15,7 +15,7 @@ export const InputTextBtn = (props) => {
       <InputTextBox
         onChange={onChange}
         text={text}
-        placeholder={"TODOを入力"}
+        placeholder="TODOを入力"
       ></InputTextBox>
 
       <PrimaryBtn onClick={onClick}>保存</PrimaryBtn>
